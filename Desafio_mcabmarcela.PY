@@ -146,11 +146,10 @@ def extrato(saldo, extrato, numero_saques, soma_de_saques):
 def verificar_cpf(cadastro_de_usuario):
     cpf = input('Digite seu CPF - ')
 
-    '''
     while len(cpf) < 11:
         print('CPF Inválido, CPF deve conter 11 digitos')
         cpf = input('Digite seu CPF - ')
-    '''
+
     verificacao = [cadastro_de_usuario[i] for i in cadastro_de_usuario if cpf == i] or [False for i in cadastro_de_usuario if cpf != i]
     
     if verificacao == [] or False in verificacao:
